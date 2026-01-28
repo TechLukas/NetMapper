@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Dashboard{% endblock %} {% block
+content %}
+<div class="card">
+  <h2>Ping Sweep</h2>
+  <form id="ping_sweep_form" class="form-modern">
+    <input type="text" name="network" placeholder="192.168.100.0" />
+    <input type="text" name="netmask" placeholder="24" />
+    <input type="submit" value="Scan!" />
+  </form>
+
+  <div class="list">
+    <ul id="ping_results">
+      <!-- JS will populate results here -->
+    </ul>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

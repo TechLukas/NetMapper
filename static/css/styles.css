@@ -1,0 +1,148 @@
+:root {
+  --bg-main: #1c1c1c; /* overall background, dark grey */
+  --bg-nav: #252526; /* navbar, slightly lighter grey */
+  --bg-card: #2a2a2a; /* cards and panels */
+  --text-main: #e5e5e5; /* main text, soft white */
+  --text-muted: #aaaaaa; /* muted text, light grey */
+  --accent: #4d8def; /* accent color, teal/greenish like ChatGPT */
+  --border: #333333; /* subtle borders */
+  --list: #1f1f1f; /* lists or results background */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-nav);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.navbar-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--accent);
+}
+
+/* Main container */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Optional card style for tools */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  background-color: var(--list);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.form-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* smaller space between inputs */
+  background-color: var(--list);
+  padding: 0.75rem 1rem; /* less padding */
+  border: 1px solid var(--border);
+  border-radius: 6px; /* slightly smaller corners */
+}
+
+.form-modern input[type="text"] {
+  background-color: #2e2e2e;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: 4px; /* smaller radius */
+  padding: 0.4rem 0.6rem; /* less padding */
+  font-size: 0.9rem; /* slightly smaller text */
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-modern input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+.form-modern input[type="text"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(77, 141, 239, 0.2);
+  outline: none;
+}
+
+.form-modern input[type="submit"] {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* smaller radius */
+  padding: 0.4rem 0.8rem; /* less padding */
+  font-size: 0.9rem; /* smaller text */
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.form-modern input[type="submit"]:hover {
+  background-color: #3b6fd1;
+  transform: translateY(-1px);
+}
+
+.form-modern input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

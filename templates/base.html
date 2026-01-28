@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Network Mapper{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">NetMapper</a>
+
+      <div class="navbar-links">
+        <a href="/">Dashboard</a>
+        <a href="#ping-sweep">Ping Sweep</a>
+        <a href="#port-scan">Port Scan</a>
+      </div>
+    </nav>
+
+    <main class="container">{% block content %}{% endblock %}</main>
+
+    <footer>Network Mapping Tool • Flask</footer>
+  </body>
+</html>
