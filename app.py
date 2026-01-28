@@ -24,7 +24,7 @@ def ping_sweep_handler():
 @app.route("/api/port_scan",methods=["POST"])
 def port_scan_handler():
     data = request.get_json()
-    if not data and "ip" not in data or "port_range" not in data:
+    if not data or "ip" not in data or "port_range" not in data:
         return "IP and/or port range is required."
     
     ip = str(data["ip"])

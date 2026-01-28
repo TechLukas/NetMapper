@@ -139,6 +139,56 @@ body {
   transform: translateY(0);
 }
 
+/* Ping results list */
+#ping_results {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Individual result row */
+.result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #262626;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.6rem 0.8rem;
+}
+
+/* IP + status text */
+.result-text {
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+/* Scan ports button */
+.scan-btn {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.1s;
+}
+
+.scan-btn:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.scan-btn:active {
+  transform: translateY(0);
+}
+
 footer {
   margin-top: 3rem;
   padding: 1rem;

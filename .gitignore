@@ -5,3 +5,4 @@ venv/
 env/
 instance/
 .DS_Store
+html_testing
